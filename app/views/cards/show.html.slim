@@ -1,7 +1,8 @@
-/! card start
+css:
+  .player-photo-front { background-image: url("#{@card.front_image}"); }
+
 .container.card-a-tron
   .card
-    /! card front begin
     .face.front
       .team-logo
       .player-photo-front
@@ -9,34 +10,27 @@
           | 11
         .player-name-front
           h3 = @card.name
-    /! card front end
-    /! card back begin
     .face.back
       .player-content-back
         .player-identification-back
           .player-photo-back
           .player-name-back
-            | Adam Boyet
+            = @card.name
         .player-statistics
           .player-position-title
-            | Position
+            | Location
             br/
             span.player-position
-              | Center Field
-          .player-bat-thorw-title
-            | B/T
-            br/
-            span.player-bat-thorw
-              | Left/Right
+              = @card.location
           .player-school-title
-            | High School
+            | Birthday
             br/
             span.player-school
-              | Cybertron High – class of 2015
+              = @card.birthday
         .honors-divider
           hr/
           p
-            | Honors
+            | Achievements
           hr/
         .player-honors
           .left-side-honors
@@ -53,35 +47,3 @@
               li Overachiever Forever
         .video-link
           a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"  Adam Boyet Demo Reel
-        .school-statistics
-          .gpa-score
-            h4 GPA 3.95
-          .act-score
-            h4 ACT 35
-    /! card back end
-/! card end
-
-
-p#notice= notice
-p
-  strong Name:
-  = @card.name
-p
-  strong Birthday:
-  = @card.birthday
-p
-  strong Location:
-  = @card.location
-p
-  strong Icon:
-  = @card.icon
-p
-  strong Front image:
-  = @card.front_image
-p
-  strong Back thumb:
-  = @card.back_thumb
-p
-  strong Color:
-  = @card.color
-= link_to 'Edit', edit_card_path(@card)

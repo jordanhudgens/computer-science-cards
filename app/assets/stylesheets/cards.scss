@@ -1,27 +1,27 @@
+
 .card {
   width: 324px;
   height: 412px;
-  /*box-shadow: 5px 8px 5px 3px #ccc;*/
   transform-style: preserve-3d;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 
 .container:hover .card {
   -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .face {
   position: absolute;
   backface-visibility: hidden;
 }
-/* end primary card fliperooo junks */
-/* front of card styles */
 
 .front {
   width: 324px;
   height: 412px;
   border-radius: 2px;
-  background-color: rgb(131, 167, 218);
+  background-color: #e6ecf4;
   z-index: 10;
 }
 
@@ -33,13 +33,12 @@
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 288px;
+  width: 286px;
   height: 340px;
   border-width: 3px;
   border-style: solid;
   border-color: rgb(2, 48, 116);
   border-bottom-left-radius: 32px;
-  background-image: url('../img/megatron.png');
 }
 
 .player-name-front {
@@ -67,8 +66,6 @@
   margin-left: 39%;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url('../img/white-back.png');
-  z-index: 1;
 }
 
 .player-number {
@@ -89,11 +86,9 @@
   height: 372px;
   padding: 20px;
   border-radius: 2px;
-  background-color: #f7f7f7;
+  background-color: #e6ecf4;
   transform: rotateY(180deg);
 }
-/* end front of card styles */
-/* back of card styles */
 
 .player-content-back {
   height: 360px;
@@ -124,7 +119,7 @@
 .player-name-back {
   position: relative;
   top: -60px;
-  left: 90px;
+  left: 20px;
   width: 80px;
   font-weight: bold;
   line-height: 20px;
