@@ -1,28 +1,3 @@
-p#notice= notice
 h1 Computer Science Trading Cards
-table
-  thead
-    tr
-      th Name
-      th Birthday
-      th Location
-      th Icon
-      th Front image
-      th Back thumb
-      th Color
-      th colspan="3" 
-  tbody
-    - @cards.each do |card|
-      tr
-        td= card.name
-        td= card.birthday
-        td= card.location
-        td= card.icon
-        td= card.front_image
-        td= card.back_thumb
-        td= card.color
-        td= link_to 'Show', card
-        td= link_to 'Edit', edit_card_path(card)
-        td= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }
-br/
-= link_to 'New Card', new_card_path
+
+= render @cards

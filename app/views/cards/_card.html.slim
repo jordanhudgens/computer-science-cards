@@ -1,0 +1,49 @@
+css:
+  .player-photo-front { background-image: url("#{card.front_image}"); }
+
+.container.card-a-tron
+  .card
+    .face.front
+      .team-logo
+      .player-photo-front
+        .player-number
+          | 11
+        .player-name-front
+          h3 = card.name
+    .face.back
+      .player-content-back
+        .player-identification-back
+          .player-photo-back
+          .player-name-back
+            = card.name
+        .player-statistics
+          .player-position-title
+            | Location
+            br/
+            span.player-position
+              = card.location
+          .player-school-title
+            | Birthday
+            br/
+            span.player-school
+              = card.birthday
+        .honors-divider
+          hr/
+          p
+            | Achievements
+          hr/
+        .player-honors
+          .left-side-honors
+            ul
+              li All-District 2011-12
+              li All-Conference 2011-12
+              li All-Robotics 2010-13
+              li Overachiever Forever
+          .right-side-honors
+            ul
+              li Academic Honors 2011-12
+              li Scholar Honors 2011-12
+              li National Athelete 2010-13
+              li Overachiever Forever
+        .video-link
+          a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"  Adam Boyet Demo Reel
