@@ -1,3 +1,298 @@
-// Place all the styles related to the Cards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.card {
+  width: 324px;
+  height: 412px;
+  /*box-shadow: 5px 8px 5px 3px #ccc;*/
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.container:hover .card {
+  -webkit-transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+/* end primary card fliperooo junks */
+/* front of card styles */
+
+.front {
+  width: 324px;
+  height: 412px;
+  border-radius: 2px;
+  background-color: rgb(131, 167, 218);
+  z-index: 10;
+}
+
+.container:hover .front {
+  z-index: 0;
+}
+
+.player-photo-front {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 288px;
+  height: 340px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(2, 48, 116);
+  border-bottom-left-radius: 32px;
+  background-image: url('../img/megatron.png');
+}
+
+.player-name-front {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 200 !important;
+  color: rgb(2, 48, 116);
+}
+
+.card-a-tron {
+  float: left;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.team-logo {
+  position: absolute;
+  width: 75px;
+  height: 55px;
+  margin-top: 5px;
+  margin-left: 39%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../img/white-back.png');
+  z-index: 1;
+}
+
+.player-number {
+  margin-top: 287px;
+  margin-left: -2px;
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 30px;
+  color: rgb(131, 167, 218);
+  background-color: rgb(2, 48, 116);
+}
+
+.card-a-tron .back {
+  width: 284px;
+  height: 372px;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #f7f7f7;
+  transform: rotateY(180deg);
+}
+/* end front of card styles */
+/* back of card styles */
+
+.player-content-back {
+  height: 360px;
+  border-width: 3px;
+  border-style: solid;
+  border-top-left-radius: 43px;
+  border-color: rgb(131, 167, 218);
+}
+
+.player-identification-back {
+  height: 80px;
+  width: 100%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: rgb(131, 167, 218);
+}
+
+.player-photo-back {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: -149px -75px;
+  background-image: url('../img/megatron.png');
+  transform: scaleX(-1);
+}
+
+.player-name-back {
+  position: relative;
+  top: -60px;
+  left: 90px;
+  width: 80px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgb(2, 48, 116);
+}
+
+.player-statistics {
+  height: 75px;
+  width: 250px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(131, 167, 218);
+}
+
+.player-position-title {
+  width: 125px;
+  height: 45px;
+  display: inline-block;
+  float: left;
+}
+
+.player-position-title span {
+  color: rgb(2, 48, 116);
+  text-transform: none;
+  font-style: italic;
+}
+
+.player-bat-thorw-title {
+  width: 125px;
+  height: 45px;
+  display: inline-block;
+  float: left;
+}
+
+.player-bat-thorw-title span {
+  color: rgb(2, 48, 116);
+  text-transform: none;
+  font-style: italic;
+}
+
+.player-school-title {
+  width: 250px;
+  height: 45px;
+  display: inline-block;
+  float: left;
+}
+
+.player-school-title span {
+  color: rgb(2, 48, 116);
+  text-transform: none;
+  font-style: italic;
+}
+
+.honors-divider {
+  width: 250px;
+  margin: 0 auto;
+  font-size: 11px;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  color: rgb(131, 167, 218);
+}
+
+.honors-divider span {
+  letter-spacing: 8px;
+  font-weight: normal;
+}
+
+.honors-divider span:last-child {
+  margin-left: 5px;
+}
+
+.honors-divider span:first-child {
+  margin-right: 5px;
+}
+
+hr {
+  border-width: 1px;
+  border-left-style: solid;
+  border-top-style: none;
+  border-color: rgb(131, 167, 218);
+}
+
+.player-honors {
+  height: 75px;
+  width: 250px;
+  padding: 15px;
+  margin-top: -5px;
+  font-weight: 200;
+  font-size: 10px;
+  color: rgb(2, 48, 116);
+}
+
+.left-side-honors {
+  display: inline-block;
+  width: 125px;
+  float: left;
+}
+
+.right-side-honors {
+  display: inline-block;
+  width: 125px;
+  float: left;
+}
+
+.player-honors ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-honors li {
+  padding-top: 5px;
+}
+
+.video-link {
+  display: inline-block;
+  float: left;
+  width: 16px;
+  height: 15px;
+  margin-left: 63px;
+  margin-top: -15px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('../img/youtube-icon.png');
+}
+
+.video-link a {
+  display: inline-block;
+  float: left;
+  width: 190px;
+  margin-left: -63px;
+  padding-left: 88px;
+  font-size: 10px;
+  color: rgb(2, 48, 116);
+  text-decoration: none;
+}
+
+.school-statistics {
+  margin-top: 6px;
+  width: 278px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.school-statistics h4 {
+  margin-top: 6px;
+}
+
+.gpa-score {
+  display: inline-block;
+  float: left;
+  width: 70px;
+  height: 25px;
+  color: #f7f7f7;
+  background-color: rgb(131, 167, 218);
+}
+
+.act-score {
+  display: inline-block;
+  float: right;
+  width: 60px;
+  height: 25px;
+  color: #f7f7f7;
+  background-color: rgb(131, 167, 218);
+}
