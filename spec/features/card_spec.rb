@@ -6,3 +6,4 @@ describe 'Card feature' do
     expect(page).to have_content('Computer Science Trading Cards')
   end
 end
+
