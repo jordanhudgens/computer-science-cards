@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :cards, except: [:index]
+  resources :cards, only: [:show]
 
   root to: 'cards#index'
 end

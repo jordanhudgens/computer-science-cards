@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418161431) do
+ActiveRecord::Schema.define(version: 20170418183052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,11 @@ ActiveRecord::Schema.define(version: 20170418161431) do
     t.string   "name"
     t.date     "birthday"
     t.string   "location"
-    t.text     "icon"
     t.text     "front_image"
-    t.text     "back_thumb"
-    t.integer  "color",       default: 0
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "slug"
+    t.integer  "position"
     t.index ["slug"], name: "index_cards_on_slug", unique: true, using: :btree
   end
 
