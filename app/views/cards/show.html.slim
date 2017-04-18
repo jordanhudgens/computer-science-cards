@@ -1,0 +1,25 @@
+p#notice= notice
+p
+  strong Name:
+  = @card.name
+p
+  strong Birthday:
+  = @card.birthday
+p
+  strong Location:
+  = @card.location
+p
+  strong Icon:
+  = @card.icon
+p
+  strong Front image:
+  = @card.front_image
+p
+  strong Back thumb:
+  = @card.back_thumb
+p
+  strong Color:
+  = @card.color
+= link_to 'Edit', edit_card_path(@card)
+| \
+= link_to 'Back', cards_path
