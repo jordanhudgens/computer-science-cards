@@ -1,12 +1,12 @@
 
-.card {
+.person-card {
   width: 324px;
   height: 412px;
   transform-style: preserve-3d;
   transition: 0.8s;
 }
 
-.container:hover .card {
+.container:hover .person-card {
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
@@ -52,7 +52,7 @@
   color: rgb(2, 48, 116);
 }
 
-.card-a-tron {
+.person-card-a-tron {
   float: left;
   margin-left: 25px;
   margin-bottom: 25px;
@@ -81,7 +81,7 @@
   background-color: rgb(2, 48, 116);
 }
 
-.card-a-tron .back {
+.person-card-a-tron .back {
   width: 284px;
   height: 372px;
   padding: 20px;
@@ -112,7 +112,7 @@
   border-radius: 40px;
   background-repeat: no-repeat;
   background-position: -149px -75px;
-  background-image: url('../img/megatron.png');
+  /*background-image: url('../img/megatron.png');*/
   transform: scaleX(-1);
 }
 
