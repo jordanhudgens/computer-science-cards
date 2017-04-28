@@ -1,3 +1,15 @@
-h1 Computer Science Trading Cards
+= render 'homepage/slider'
 
-= render @cards
+div.container.homepage-wrapper
+  div.row
+    div.col-md-12
+      h1 Computer Science Trading Cards
+      = render @cards
+
+div
+  div.col-md-12
+    = render 'homepage/homepage_columns'
+
+div
+  div.col-md-12
+    = render 'homepage/homepage_blocks'
